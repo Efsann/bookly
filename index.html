@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitab Dünyası</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Bookly Logo" style="height: 100px;">
+    <h1 style="font-size: 50px; color: #5608aa;">Bookly</h1>
+
+
+    <nav>
+        <ul>
+            <li><a href="#">Ana səhifə</a></li>
+              <li class="dropdown">
+                <a href="#">Kitablar</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Elmi</a></li>
+                  <li><a href="#">Roman</a></li>
+                  <li><a href="#">Fəlsəfə və dini</a></li>
+                  <li><a href="#">Dedektiv</a></li>
+                </ul>
+              </li>
+              <li><a href="#about">Haqqımızda</a></li>
+              <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+          </nav>
+          
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Yeni kitablar burada!</h1>
+    <p>Oxumağı sevirsənsə, doğru ünvandasan! Burada hər zövqə uyğun kitab var – romanlar, elmi əsərlər,
+       fəlsəfi düşüncələr və daha nələr-nələr. Hər gün yenilənən kitablarla.</p>
+  </section>
+  <section class="books" id="books">
+    <h2>Populyar Kitablar</h2>
+    <p>Bu ayın ən çox satılan kitabları.</p>  
+    <div class="book-list">
+      <div class="book">
+        <img src="agnostisizm.jpg" alt="Kitab 1">
+        <h3>Agnostisizm ve İlahi Tragedya</h3>
+        <p>Müəllif: Diamond Tema</p>
+        <p>Qiymət: 27.79 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="ifa.jpg" alt="Kitab 2">
+        <h3>İFA - İnsanın Fabrika Ayarları -3 kitab tək cild</h3>
+        <p>Müəllif: Sinan Canan</p>
+        <p>Qiymət: 30 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="celalsengor.jpg" alt="Kitab 3">
+        <h3>Senin Cahilliğin Benim Yaşamımı Etkiliyor</h3>
+        <p>Müəllif: Celal Şengör</p>
+        <p>Qiymət: 11.8 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="beyazleke.jpg" alt="Kitab 4">
+        <h3>Beyaz Leke</h3>
+        <p>Müəllif: Aslı Arslan</p>
+        <p>Qiymət: 19.72 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="turlerinkokeni.jpeg" alt="Kitab 5">
+        <h3>Türlerin Kökeni</h3>
+        <p>Müəllif: Charles Darwin</p>
+        <p>Qiymət: 17 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="ataturk.jpg" alt="Kitab 6">
+        <h3>Gazi Mustafa Kemal Atatürk</h3>
+        <p>Müəllif: Ilber Ortaylı</p>
+        <p>Qiymət: 14.22 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+    </div>
+      <div class="book">
+        <img src="kibarhirsiz.jpg" alt="Kitab 7">
+        <h3>Kibar Hırsız</h3>
+        <p>Müəllif: Maurice Leblanc</p>
+        <p>Qiymət: 20 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="george.jpeg" alt="Kitab 8">
+        <h3>1984</h3>
+        <p>George Orwell</p>
+        <p>Qiymət: 7 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="evremveyasam.jpeg" alt="Kitab 9">
+        <h3>Evrenin ve Yaşamın Sırları</h3>
+        <p>Müəllif: Carl Sagan Kozmos</p>
+        <p>Qiymət: 19 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="enyalnizbeyni.jpg" alt="Kitab 10">
+        <h3>Dünyanın En Yalnız Beyni</h3>
+        <p>Müəllif: Serkan Karaismailoğlu</p>
+        <p>Qiymət: 11 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="rezonans.jpg" alt="Kitab 11">
+        <h3>Rezonans Kanunu</h3>
+        <p>Müəllif: Pierre Franckh</p>
+        <p>Qiymət: 13.53 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+      <div class="book">
+        <img src="dopamin.jpeg" alt="Kitab 12">
+        <h3>Kalk Bi Dopamin Demle</h3>
+        <p>Müəllif: Serkan Karaismailoğlu </p>
+        <p>Qiymət: 15 AZN</p>
+        <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <h2>Haqqımızda</h2>
+    <p>Biz kitabları çox sevirik – və istəyirik ki, səni də sevdirək! Bookly komandası olaraq məqsədimiz, oxumağı sevən insanlara rahat,
+       keyfiyyətli və əyləncəli bir kitab platforması təqdim etməkdir. Burada öz zövqünə uyğun kitab tapmaq asandır. Sadəcə bax, seç və oxumağa başla!</p>
+  </section>
+  <section class="contact" id="contact">
+    <h2>Bizimlə Əlaqə</h2>
+    <form>
+      <label for="name">Ad:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Mesajınız:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Göndər</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Bookly. Bütün hüquqlar qorunur.</p>
+  </footer>
+</body>
+</html>
