@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Sifariş et</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Sifariş Formu</h2>
+        <form action="/sifaris" method="POST" class="order-form">
+          <label for="adsoyad">Ad Soyad:</label>
+          <input type="text" id="adsoyad" name="adsoyad" required>
+          <label for="nomre">Əlaqə nömrəsi:</label>
+          <input type="text" id="nomre" name="nomre" required>
+          <label for="unvan">Ünvan:</label>
+          <input type="text" id="unvan" name="unvan" required>
+          <button type="submit" onclick="alert('Sifarişiniz qeydə alındı!Sifariş haqqında məlumatlar whatsapp vasitəsilə  göndəriləcək')" class="btn">Sifarişi Təsdiqlə</button>
+          <!-- <button class="order-btn" onclick="alert('Sifarişiniz qeydə alındı!')">Sifariş et</button> -->
+        </form>
+      </div>
+</body>
+</html>
