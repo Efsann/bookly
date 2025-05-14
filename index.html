@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta  content="width=device-width, initial-scale=1.0">
+  <title>Kitab Dünyası</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" class="logo">  <!--  bura elave olunmuyub githuba-->
+    <img src="logo.png" alt="Bookly Logo"  style="height: 70px; width: 150px; ">
+    </a>
+    <nav>
+  <ul>
+    <li>
+      <a href="#" onclick="filterBooks('all'); window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Ana səhifə</a>
+    </li>
+    <li class="dropdown">
+      <a href="#">Kitablar</a>
+      <ul class="dropdown-content">
+        <li onclick="filterBooks('elmi')">Elmi</li>
+        <li onclick="filterBooks('roman')">Roman</li>
+        <li onclick="filterBooks('felsefe')">Fəlsəfə və dini</li>
+        <li onclick="filterBooks('dedektiv')">Dedektiv</li>
+        <li onclick="filterBooks('psixologiya')">Psixologiya</li>
+        <li onclick="filterBooks('tarix')">Tarix</li>
+        <li onclick="filterBooks('usaq')">Uşaqlar üçün</li>
+        <li onclick="filterBooks('all')">Hamısı</li>
+      </ul>
+    </li>
+    <li><a href="#about" class="scroll-link">Haqqımızda</a></li>
+    <li><a href="#contact" class="scroll-link">Əlaqə</a></li>
+    <li><a href="login.html">Giriş</a></li>
+  </ul>
+</nav>
+
+  </header>
+  <section class="no-books">
+    
+    <p id="no-books-message" style="display: none; text-align: center;" ><b>
+      Bu kateqoriyaya aid kitab yoxdur.</b> 
+    </p>
+
+  </section>
+
+  <section class="hero">
+    <h1>Yeni kitablar burada!</h1>
+    <p>Oxumağı sevirsənsə, doğru ünvandasan! Burada hər zövqə uyğun kitab var – romanlar, elmi əsərlər,
+       fəlsəfi düşüncələr və daha nələr-nələr. Hər gün yenilənən kitablarla.</p>
+  </section>
+  <section class="books" id="books">
+    <h2>Bütün Kitablar</h2>
+    <p>Burada hər zövqə uyğun kitab tapa bilərsən – elmi, roman, fəlsəfə və daha çox.</p>  
+    <div class="book-list">
+      <div class="book" data-category="felsefe">
+        <img src="agnostisizm.jpg" alt="Kitab 1" >
+        <h3>Agnostisizm ve İlahi Tragedya</h3>
+        <p>Müəllif: Diamond Tema</p>
+        <p>Qiymət: 27.79 AZN</p>
+        <a href="agnostisizm.html" class="order-btn">Ətraflı bax</a>
+
+        <button class="order-btn"><a href="order.html?kitab=Agnostisizm%20ve%20İlahi%20Tragedya">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="elmi">
+        <img src="ifa.jpg" alt="Kitab 2">
+        <h3>İFA - İnsanın Fabrika Ayarları </h3>
+        <p>Müəllif: Sinan Canan</p>
+        <p>Qiymət: 30 AZN</p>
+        <a href="ifa.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn"> <a href="order.html?kitab=İFA%20-%20İnsanın%20Fabrika%20Ayarları%20-3%20kitab%20tək%20cild<">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="elmi">
+        <img src="celalsengor.jpg" alt="Kitab 3">
+        <h3>Senin Cahilliğin Benim Yaşamımı Etkiliyor</h3>
+        <p>Müəllif: Celal Şengör</p>
+        <p>Qiymət: 11.8 AZN</p>
+        <a href="celalsengor.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn"><a href="order.html?kitab=Senin%20Cahilliğin%20Benim%20Yaşamımı%20Etkiliyor">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="roman">
+        <img src="beyazleke2.jpg" alt="Kitab 4">
+        <h3>Beyaz Leke</h3>
+        <p>Müəllif: Aslı Arslan</p>
+        <p>Qiymət: 19.72 AZN</p>
+        <a href="beyazleke.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn"> <a href="order.html?kitab=Beyaz%20Leke">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="roman">
+        <img src="sucveceza.jpg" alt="Kitab 5">
+        <h3>Suç ve Ceza</h3>
+        <p>Müəllif: Fyodor Dostoyevski</p>
+        <p>Qiymət: 8.72 AZN</p>
+        <a href="sucveceza.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn"> <a href="order.html?kitab=Suç%20ve%20Ceza">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="roman">
+        <img src="sefiller.jpg" alt="Kitab 6">
+        <h3>Sefiller</h3>
+        <p>Müəllif: Victor Hugo</p>
+        <p>Qiymət: 10 AZN</p>
+        <a href="sefiller.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Sefiller">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="roman">
+        <img src="ugultulutepeler.jpeg" alt="Kitab 7">
+        <h3>Uğultulu Tepeler</h3>
+        <p>Müəllif: Emily Bronte</p>
+        <p>Qiymət: 5.47 AZN</p>
+        <a href="ugultulutepeler.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Uğultulu%20Tepeler">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="felsefe">
+        <img src="zamaninkisatarihi.jpeg" alt="Kitab 8">
+        <h3>Zamanın Kısa Tarihi</h3>
+        <p>Müəllif: Stephen Hawking</p>
+        <p>Qiymət: 8.5 AZN</p>
+        <a href="zamaninkisatarihi.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Zamanın%20Kısa%20Tarihi">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="psixologiya">
+        <img src="bilincaltiningucu.jpeg" alt="Kitab 9">
+        <h3>Bilinçaltının Gücü</h3>
+        <p>Müəllif: Joseph Murphy </p>
+        <p>Qiymət: 7 AZN</p>
+        <a href="bilincalti.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Bilinçaltının%20Gücü">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="felsefe">
+        <img src="tanriyanilgisi.jpeg" alt="Kitab 10">
+        <h3>Tanrı Yanılgısı</h3>
+        <p>Müəllif: Richard Dawkins</p>
+        <p>Qiymət: 16.58 AZN</p>
+        <a href="tanriyanilgisi.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Tanrının%20Yanılgısı">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="dedektiv">
+        <img src="sherlockholmes.jpg" alt="Kitab 11">
+        <h3>Sherlock Holmes'ün Maceraları</h3>
+        <p>Müəllif: Sir Arthur Conan Doyle</p>
+        <p>Qiymət: 9.45 AZN</p>
+        <a href="sherlocholmes.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Sherlock%20Holmes'ün%20Maceraları">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="tarix">
+        <img src="geldunyayikesfedelim.jpeg" alt="Kitab 12">
+        <h3>Gel Dünyayı Keşfedelim</h3>
+        <p>Müəllif: Prof. Dr. İlber Ortaylı</p>
+        <p>Qiymət: 7 AZN</p>
+        <a href="geldunyayikesfedelim.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Gel%20Dünyayı%20Keşfedelim">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="felsefe">
+        <img src="insaninanlamarayisi.jpeg" alt="Kitab 13">
+        <h3>İnsanın Anlam Arayışı</h3>
+        <p>Müəllif: Viktor Emil Frankl </p>
+        <p>Qiymət: 12 AZN</p>
+        <a href="insaninanlamarayisi.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=İnsanın%20Anlam%20Arayışı">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="tarix">
+        <img src="turklerintarihi1.jpeg" alt="Kitab 14">
+        <h3>Türklerin Tarihi-1</h3>
+        <p>Müəllif: Prof. Dr. İlber Ortaylı </p>
+        <p>Qiymət: 7.21 AZN</p>
+        <a href="turklerintarihi.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Türklerin%20Tarihi">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="roman">
+        <img src="turklerintarihi.jpeg" alt="Kitab 15">
+        <h3>Türklerin Tarihi-2</h3>
+        <p>Müəllif: Prof. Dr. İlber Ortaylı </p>
+        <p>Qiymət: 7.89 AZN</p>
+        <a href="turklerintarihi2.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Türklerin%20Tarhi-2">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="elmi">
+        <img src="kbi.jpg" alt="Kitab 16">
+        <h3>Kuantum Boyutunda İstihbarat</h3>
+        <p>Müəllif:Ramazan Biçer</p>
+        <p>Qiymət: 6.87 AZN</p>
+        <a href="kbi.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Kuantum%20Boyutunda%20İstihbarat">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="dedektiv" >
+        <img src="mektubdakiqadin.png" alt="Kitab 17">
+        <h3>Məktubdakı Qadın</h3>
+        <p>Müəllif: Mürşüd Mehdi</p>
+        <p>Qiymət: 8.99 AZN</p>
+        <a href="mektubdakiqadin.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Məktubdakı%20Qadın">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="elmi">
+        <img src="hayvantosapiens.jpeg" alt="Kitab 18">
+        <h3>Hayvanlardan Tanrılara Sapiens</h3>
+        <p>Müəllif: Yuval Noah Harari</p>
+        <p>Qiymət: 21.99 AZN</p>
+        <a href="hayvantosapiens.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Hayvanlardan%20Tanrılara%20Sapiens">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="felsefe">
+        <img src="turlerinkokeni.jpeg" alt="Kitab 5">
+        <h3>Türlerin Kökeni</h3>
+        <p>Müəllif: Charles Darwin</p>
+        <p>Qiymət: 17 AZN</p>
+        <a href="turlerinkokeni.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Türlerin%20Kökeni">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="tarix">
+        <img src="ataturk.jpg" alt="Kitab 6">
+        <h3>Gazi Mustafa Kemal Atatürk</h3>
+        <p>Müəllif: Ilber Ortaylı</p>
+        <p>Qiymət: 14.22 AZN</p>
+        <a href="ataturk.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Gazi%20Mustafa%20Kemal%20Atatürk">Sifariş et</a></button>
+    </div>
+      <div class="book" data-category="dedektiv">
+        <img src="kibarhirsiz.jpg" alt="Kitab 7">
+        <h3>Kibar Hırsız</h3>
+        <p>Müəllif: Maurice Leblanc</p>
+        <p>Qiymət: 20 AZN</p>
+        <a href="kibarhirsiz.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Kibar%20Hırsız">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="roman">
+        <img src="george.jpeg" alt="Kitab 8">
+        <h3>1984</h3>
+        <p>George Orwell</p>
+        <p>Qiymət: 7 AZN</p>
+        <a href="george.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=1984">Sifariş et</a></button>
+      </div>
+      <div class="book" data-category="felsefe">
+        <img src="evremveyasam.jpeg" alt="Kitab 9">
+        <h3>Kozmos Evrenin ve Yaşamın Sırları</h3>
+        <p>Müəllif: Carl Sagan </p>
+        <p>Qiymət: 19 AZN</p>
+        <a href="evremveyasam.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Evrenin%20ve%20Yaşamın%20Sırları">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="psixologiya">
+        <img src="enyalnizbeyni.jpg" alt="Kitab 10">
+        <h3>Dünyanın En Yalnız Beyni</h3>
+        <p>Müəllif: Serkan Karaismailoğlu</p>
+        <p>Qiymət: 11 AZN</p>
+        <a href="enyalnizbeyin.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Dünyanın%20En%20Yalnız%20Beyni">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="psixologiya">
+        <img src="rezonans2.jpg" alt="Kitab 11">
+        <h3>Rezonans Kanunu</h3>
+        <p>Müəllif: Pierre Franckh</p>
+        <p>Qiymət: 13.53 AZN</p>
+        <a href="rezonans.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Rezonans%20Kanunu">Sifariş et</a></button>
+      </div>
+      <div class="book"data-category="psixologiya">
+        <img src="dopamin.jpeg" alt="Kitab 12">
+        <h3>Kalk Bi Dopamin Demle</h3>
+        <p>Müəllif: Serkan Karaismailoğlu </p>
+        <p>Qiymət: 15 AZN</p>
+        <a href="dopamin.html" class="order-btn">Ətraflı bax</a>
+        <button class="order-btn" > <a href="order.html?kitab=Kalk%20Bi%20Dopamin%20Demle">Sifariş et</a></button>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <h2>Haqqımızda</h2>
+    <p>Biz kitabları çox sevirik – və istəyirik ki, səni də sevdirək! Bookly komandası olaraq məqsədimiz, oxumağı sevən insanlara rahat,
+       keyfiyyətli və əyləncəli bir kitab platforması təqdim etməkdir. Burada öz zövqünə uyğun kitab tapmaq asandır. Sadəcə bax, seç və oxumağa başla!</p>
+  <!-- </section>
+    <section id="location">
+  <h2>Mağazamızın Yeri</h2>
+  <p>Bizi burada tapa bilərsiniz:</p>
+  <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1144.831174798008!2d49.72566732465799!3d40.47611870916802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403085750a9f3d61%3A0x24e5c126412d760!2sBaku%20Engineering%20University!5e1!3m2!1saz!2saz!4v1747165445010!5m2!1saz!2saz
+            width="100%" height="250" style="border: 5px;;" 
+            allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section> -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <h2>Bizimlə əlaqə</h2>
+      <form action="https://formspree.io/f/moverroe" method="POST" class="contact-form">
+        <label for="name">Adınız:</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <label for="message">Mesaj:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+        <button type="submit">Göndər</button>
+      </form>
+    </div>
+  </section>
+  <button class="go-top-btn">
+      <img src="scrolltotop.png" alt="arrow up">
+    </button>
+  <footer>
+    <p>&copy; 2025 Bookly. Bütün hüquqlar qorunur.</p>
+  </footer>
+</body>
+<!-- ****************************javascript******************************** -->
+<script>
+function filterBooks(category) {
+  const books = document.querySelectorAll('.book');
+  const noBooksMessage = document.getElementById('no-books-message');
+  let found = false;
+  books.forEach(book => {
+    if (category === 'all' || book.dataset.category === category) {
+      book.style.display = '';
+      found = true;
+    } else {
+      book.style.display = 'none';
+    }
+  });
+  if (!found) {
+    noBooksMessage.style.display = 'block';
+  } else {
+    noBooksMessage.style.display = 'none';
+  } 
+}
+document.querySelectorAll('.scroll-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1); // about və contact
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+// Scroll to top button
+const goTopBtn = document.querySelector('.go-top-btn');
+window.addEventListener('scroll', checkHeight)
+function checkHeight(){
+  if(window.scrollY > 900) {
+    goTopBtn.style.display = "flex"
+  } else {
+    goTopBtn.style.display = "none"
+  }
+}
+goTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+})
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Sifariş et</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="container">
+    <h2>Sifariş Formu</h2>        
+    <form 
+      action="https://formspree.io/f/mzzewyeq" 
+      method="POST"
+      class="order-form"
+      >
+      <label for="adsoyad">Ad Soyad:</label>
+      <input type="text" id="adsoyad" name="Ad Soyad" required>
+      <label for="nomre">Əlaqə nömrəsi:</label>
+      <input type="text" id="nomre" name="Əlaqə nömrəsi" required>
+      <label for="unvan">Ünvan:</label>
+      <input type="text" id="unvan" name="Ünvan" required>
+      <label for="kitab">Kitabın adı:</label>
+      <input type="text" id="kitab" name="Kitab" readonly>
+      <input type="hidden" name="_redirect" value="index.html">
+      <button type="submit" class="btn">Sifarişi Təsdiqlə</button>
+    </form>
+  </div>
+  <div id="toast" class="toast">Sifarişiniz qeydə alındı!</div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const kitabAdi = params.get('kitab');
+    if (kitabAdi) {
+      document.getElementById('kitab').value = decodeURIComponent(kitabAdi);
+    }
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 3000);
+    }
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+      showToast("Sifarişiniz qeydə alındı! Sifariş haqqında məlumatlar WhatsApp vasitəsilə göndəriləcək");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+  align-items: stretch; 
+}
+header {
+  background-color: #5608aa;
+  padding: 10px 20px;
+  color: white;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+header img {
+  height: auto; 
+  max-width: 150px; 
+}
+header h1 {
+  margin: 0; 
+  font-size: 2em; 
+}
+nav ul {
+  list-style: none;
+  display: flex; 
+  margin: 0;
+  padding: 0;
+  gap: 15px; 
+}
+nav ul li {
+  margin: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; 
+}
+nav ul li a:hover {
+  background-color: #7240ba; 
+}
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.book {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content {
+  background-color: rgb(117, 0, 213);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgb(0, 193, 227);
+  min-width: 160px;
+  display: none; 
+  position: absolute; 
+}
+.dropdown-content li {
+  color: #000000;
+  padding: 10px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dropdown-content li:hover {
+  background-color: #f0f0f0;
+  color: #5608aa;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.hero {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+.no-books {
+  text-align: center;
+  padding: 20px;
+  font-size: 2.2em;
+  color: #aa0808;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #5608aa;
+}
+.hero p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.books {
+  padding: 20px;
+  text-align: center;
+}
+.books h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #5608aa;
+}
+.books p{
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.5;
+}
+.book {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+
+ 
+}
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.book h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #5608aa;
+}
+.book p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+.book .order-btn {
+  background-color: #5608aa;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+.order-btn a {
+  color: white; /* istədiyin rəngi burda yaz, məsələn red, blue və ya hex kod */
+  text-decoration: none; /* altı xətdən qurtulmaq üçün */
+}
+.book .order-btn:hover {
+  background-color: #7240ba;
+}
+
+.about {
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+
+}
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #5608aa;
+}
+.about p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.5;
+}
+.contact {
+  padding: 20px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #5608aa;
+}
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+  gap: 10px; 
+}
+.contact label {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+  color: #555;
+  font-size: 1em;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.contact textarea {
+  resize: vertical;
+}
+.contact button {
+  background-color: #5608aa;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+  margin-top: 15px;
+}
+.contact button:hover {
+  background-color: #7240ba;
+}
+footer {
+  background-color:  #989797;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; 
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column; 
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2em; 
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  .book {
+    margin-bottom: 20px; 
+  }
+  nav ul li a {
+    padding: 10px;
+  }
+}
+/* scroll top */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Open Sans, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Abril Fatface, sans-serif;
+  padding: 30px 0;
+  text-align: center;
+  font-size: clamp(35px, 5vw, 90px);
+}
+
+.content {
+  padding: 0 20vw;
+  font-size: 20px;
+  text-align: justify;
+}
+/* yuxari qayitmaq ucun */
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  background: none;
+  border: none; 
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-top-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* loginsehifei */
+.login-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #f2f2f2, #e0e0e0);
+  margin: 0;
+  font-family: sans-serif;
+}
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  width: 300px;
+  text-align: center;
+}
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4b61d1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.login-container button:hover {
+  background-color: #3949ab;
+}
+/* order.html */
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.order-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.order-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.order-form .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.order-form .btn:hover {
+  background-color: #004c99;
+}
+/* order hissesi ucun bildiris */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4BB543;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ANIMASIYALAR */
+  /*KItab kartlari animasiyas*/
+.book {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book:hover {
+  transform: scale(1.65);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+  /* sehifeye girende animasiya */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.book {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+/* order sehifesi animasiyasi */
+.order-form {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ********************Kitab səhifəsi ******************/
+.book-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-page img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.book-page p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.book-page .order-btn {
+  padding: 10px 20px;
+  background-color: #5608aa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.book-page .order-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.book-page .order-btn:hover {
+  background-color: #005b09;
+}
+
+.book-page .back-btn {
+  padding: 10px 20px;
+  background-color: #f44336; /* Qırmızı rəng */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Linkin alt xəttini silir */
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.book-page .back-btn:hover {
+  background-color: #d32f2f; 
+}
