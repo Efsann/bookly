@@ -60,7 +60,6 @@ nav ul li a:hover {
   background-color: #fff;
   transition: all 0.3s ease;
 }
-
 .dropdown-content {
   background-color: rgb(117, 0, 213);
   padding: 10px;
@@ -130,8 +129,6 @@ nav ul li a:hover {
   display: flex; 
   flex-direction: column; 
   justify-content: space-between;
-
- 
 }
 .book img {
   width: 100%;
@@ -166,12 +163,10 @@ nav ul li a:hover {
 .book .order-btn:hover {
   background-color: #7240ba;
 }
-
 .about {
   padding: 20px;
   text-align: center;
   background-color: #f0f0f0;
-
 }
 .about h2 {
   font-size: 2em;
@@ -240,7 +235,6 @@ footer {
   padding: 15px;
   margin-top: auto;
 }
-
 @media (max-width: 768px) {
   header {
     flex-direction: column; 
@@ -263,31 +257,6 @@ footer {
     padding: 10px;
   }
 }
-/* scroll top */
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Open Sans, Helvetica, sans-serif;
-}
-
-h1 {
-  font-family: Abril Fatface, sans-serif;
-  padding: 30px 0;
-  text-align: center;
-  font-size: clamp(35px, 5vw, 90px);
-}
-
-.content {
-  padding: 0 20vw;
-  font-size: 20px;
-  text-align: justify;
-}
 /* yuxari qayitmaq ucun */
 .go-top-btn {
   position: fixed;
@@ -303,7 +272,6 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
 .go-top-btn img {
   width: 40px;
   height: 40px;
@@ -409,12 +377,10 @@ h1 {
   font-weight: bold;
   transition: 0.5s;
 }
-
 .toast.show {
   visibility: visible;
   opacity: 1;
 }
-
 /* ANIMASIYALAR */
   /*KItab kartlari animasiyas*/
 .book {
@@ -447,7 +413,6 @@ h1 {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
-
 /* ********************Kitab səhifəsi ******************/
 .book-page {
   max-width: 1200px;
@@ -458,7 +423,6 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
 .book-page img {
   width: 300px;
   height: auto;
@@ -470,7 +434,6 @@ h1 {
   margin-bottom: 15px;
   color: #555;
 }
-
 .book-page .order-btn {
   padding: 10px 20px;
   background-color: #5608aa;
@@ -482,16 +445,13 @@ h1 {
   transition: background-color 0.3s ease;
   margin-top: 20px;
 }
-
 .book-page .order-btn a {
   text-decoration: none;
   color: white;
 }
-
 .book-page .order-btn:hover {
   background-color: #005b09;
 }
-
 .book-page .back-btn {
   padding: 10px 20px;
   background-color: #f44336; /* Qırmızı rəng */
@@ -505,7 +465,6 @@ h1 {
   display: inline-block;
   margin-top: 20px;
 }
-
 .book-page .back-btn:hover {
   background-color: #d32f2f; 
 }
