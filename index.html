@@ -31,7 +31,13 @@
     </li>
     <li><a href="#about" class="scroll-link">Haqqımızda</a></li>
     <li><a href="#contact" class="scroll-link">Əlaqə</a></li>
-    <li><a href="login.html">Giriş</a></li>
+    <li id="loginItem"><a href="login.html">Giriş</a></li>
+    <li id="logoutItem" style="display: none;"><a href="#" onclick="logout()">Çıxış</a></li>
+    <li id="profileItem" style="display: none;"></li>
+    <li id="welcomeItem" style="display: none;">
+    <img id="profileImage" src="Screenshot 2025-05-19 225545.png" alt="Profil" style="width:30px;height:30px;border-radius:50%;vertical-align:middle;">
+    <span id="userEmail"></span>
+    </li>
   </ul>
 </nav>
 
@@ -347,5 +353,31 @@ goTopBtn.addEventListener('click', () => {
     behavior: "smooth"
   })
 })
+ //*************Giriş statusunu yoxla********
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const userEmail = localStorage.getItem("email");
+  if (isLoggedIn === "true") {
+    // "Giriş" gizlənir
+    document.getElementById("loginItem").style.display = "none";
+    // "Xoş gəldin" yazısı
+    document.getElementById("welcomeItem").style.display = "inline";
+    document.getElementById("userEmail").textContent = userEmail;
+    // Profil və Çıxış görünür
+    // document.getElementById("profileItem").style.display = "inline";
+    document.getElementById("logoutItem").style.display = "inline";
+  } else {
+    document.getElementById("loginItem").style.display = "inline";
+    document.getElementById("welcomeItem").style.display = "none";
+    // document.getElementById("profileItem").style.display = "none";
+    document.getElementById("logoutItem").style.display = "none";
+  }
+  function logout() {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("email");
+    if (confirm("Hesabdan çıxmaq istədiyinizə əminsiniz?")) {
+    localStorage.clear();
+    window.location.href = "index.html";
+  }
+  }
 </script>
 </html>
