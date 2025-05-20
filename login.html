@@ -16,8 +16,16 @@
   </div>
   <script>
     function handleLogin(event) {
-        event.preventDefault(); 
-        window.location.href = "index.html"; 
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    if (email === "salam@gmail.com" && password === "1234") {
+      localStorage.setItem("isLoggedIn", "true"); // giriş statusunu yadda saxla
+      localStorage.setItem("email", email); // istifadəçi emailini yadda saxla
+      window.location.href = "index.html";
+    } else {
+      alert("Email və ya şifrə yanlışdır!");
+    }
   }
   </script>
 </body>
